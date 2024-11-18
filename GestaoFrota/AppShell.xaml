@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Shell
+    x:Class="GestaoFrota.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GestaoFrota"
+    xmlns:combustivel="clr-namespace:GestaoFrota.Views.Combustivel"
+    FlyoutBehavior="Flyout">
+    
+    <FlyoutItem Shell.BackgroundColor="Transparent">
+        <ShellContent
+            ContentTemplate="{DataTemplate combustivel:CriarCombustivel}"
+             />
+        <ShellContent
+            ContentTemplate="{DataTemplate combustivel:ListarCombustiveis}"
+            Title="Listar Combustiveis" />
+    </FlyoutItem>
+
+    <ShellContent
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Title="Página Inicial" />
+
+
+</Shell>

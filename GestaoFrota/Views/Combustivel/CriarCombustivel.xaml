@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestaoFrota.Views.Combustivel.CriarCombustivel">
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="30" Spacing="40">
+                <Label Text="Adicionar novo tipo de combustível" FontSize="Large" FontAttributes="Bold" TextColor="BlueViolet"/>
+                    <VerticalStackLayout Spacing="20" HorizontalOptions="Start" MinimumWidthRequest="300">
+                    <Entry Text="{Binding Tipo}" Placeholder="Tipo de Combustível"/>
+                    <Entry Text="{Binding ValorLitro}" Placeholder="Valor Litro desse Combustível"/>
+                    <Button Text="Salvar" x:Name="OnSave" Clicked="OnSave_OnClicked"/>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

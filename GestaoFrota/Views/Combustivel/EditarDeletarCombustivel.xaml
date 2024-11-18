@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestaoFrota.Views.Combustivel.EditarDeletarCombustivel">
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="30" Spacing="40">
+            <Label Text="Editar Tarefa" FontSize="Large" FontAttributes="Bold" TextColor="BlueViolet"/>
+        
+            <VerticalStackLayout Spacing="20" HorizontalOptions="Start" MinimumWidthRequest="300">
+                <Entry Text="{Binding Id}" IsReadOnly="True" />
+                <Entry Placeholder="Nome do Aniversariante" Text="{Binding Title}"/>
+                <Entry Placeholder="Email do Aniversariante" Text="{Binding Description}"/>
+        
+                <HorizontalStackLayout Spacing="5">
+                    <CheckBox IsChecked="{Binding IsDone}" VerticalOptions="Center" />
+                    <Label Text="Marcar tarefa como concluida" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="StartAndExpand">
+                    <Button Text="Salvar" x:Name="Edit" Clicked="Edit_OnClicked"/>
+                    <Button Text="Excluir" x:Name="Delete" Clicked="Delete_OnClicked"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>
